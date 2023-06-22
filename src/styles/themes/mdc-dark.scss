@@ -1,0 +1,32 @@
+@import "primeng/resources/themes/mdc-dark-indigo/theme.css";
+
+body {
+  // основной радиус для границ
+  --theme-border-radius: 4px;
+  // цвет границ
+  --theme-color-border: var(--gray-100);
+  // основной цвет фона
+  --theme-color-background: rgb(18, 18, 18);
+  // основной цвет кнопки
+  --theme-color-primary: rgb(159, 168, 218); //0.92
+  //// инверсионный цвет для основной кнопки
+  //--theme-color-text-inverse: #121212;
+  // главный цвет для заголовков и логотипа
+  --theme-color-main: #646fcb; //rgba(41, 99, 173, 255);
+
+  // цвет ошибки
+  --theme-color-danger: var(--red-500);
+}
+
+.menu {
+  border-color: var(--gray-500);
+
+  .menu-link {
+    color: var(--gray-100);
+
+    &:hover {
+      background-color: var(--gray-700) !important;
+      color: #FFFFFF;
+    }
+  }
+}

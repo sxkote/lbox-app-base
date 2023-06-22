@@ -1,0 +1,20 @@
+{
+  "lb-shared": {
+    "common": {
+      "apply": "Apply",
+      "cancel": "Cancel",
+      "refresh": "Refresh",
+      "create": "Create",
+      "modify": "Modify",
+      "edit": "Edit",
+      "delete": "Delete",
+      "remove": "Remove",
+      "options": "Options",
+      "search": "Search"
+    },
+    "toasts": {
+      "success": "Success",
+      "error": "Error"
+    }
+  }
+}

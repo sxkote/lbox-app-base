@@ -1,0 +1,43 @@
+{
+  "lb-auth": {
+    "login": {
+      "welcome": "Authorization",
+      "subscription": "Subscription",
+      "login": "Login",
+      "password": "Password",
+      "remember-me": "Remember me",
+      "forgot-password": "Forgot password?",
+      "sign-in": "Sign In",
+      "sign-up": "Sign Up"
+    },
+    "registration": {
+      "link": "Registration for new users",
+      "welcome": "Registration",
+      "registration-message": "You will receive email with your credentials"
+    },
+    "password-recovery": {
+      "welcome": "Password Recovery",
+      "recovery-confirm": "Change Password",
+      "recovery-message": "You will receive email with the confirmation link"
+    },
+    "profile": {
+      "login": "Login",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "change-profile": "Change Profile",
+      "change-password": "Change Password",
+      "password-current": "Current Password",
+      "password-new": "New Password",
+      "password-confirmation": "Confirmation"
+    },
+    "toasts": {
+      "login-successful": "Login successfully",
+      "login-error": "Authorization failed",
+      "profile-password-change-successful": "Password changed successfully",
+      "profile-password-change-error": "Could not change the password",
+      "registration-successful": "Registration completed",
+      "registration-error": "Registration failed"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+<div class="menu py-2 px-4 shadow-2 flex align-items-center justify-content-between relative lg:static border-bottom-1">
+  <a routerLink="/">
+    <img src="assets/images/title.png" alt="LBox Demo" class="title-image mr-0 lg:mr-6">
+  </a>
+  <div class="flex lg:hidden">
+    <a pRipple="" (click)="this.toggleTheme()"
+       class="p-ripple p-element mr-2 flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
+      <i class="cursor-pointer text-xl"
+         [ngClass]="this.currentThemeIcon"></i>
+    </a>
+    <lb-shared-language-selector class="mr-3 inline-block"></lb-shared-language-selector>
+    <a pRipple="" class="p-ripple p-element cursor-pointer inline-block text-gray-400"
+       (click)="this.toggleMenu()">
+      <i class="bi bi-list text-4xl"></i><span class="p-ink"></span>
+    </a>
+  </div>
+
+  <div
+    class="align-items-center flex-grow-1 justify-content-between lg:flex absolute lg:static w-full left-0 top-100 z-1 shadow-2 lg:shadow-none border-1 lg:border-none border-gray-800 bg-color"
+    [ngClass]="{'hidden':this.menuHidden}">
+
+    <!-- Left Menu -->
+    <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row">
+
+      <li>
+        <a pRipple="" routerLink="/"
+           class="p-ripple p-element flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
+          <i class="bi bi-house mr-2"></i><span>{{'menu.home'|translate}}</span><span class="p-ink"></span></a>
+      </li>
+      <li>
+        <a pRipple="" routerLink="/menu-public"
+           class="p-ripple p-element flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
+          <i class="bi bi-gear mr-2"></i><span>{{'Menu-Public'|translate}}</span><span class="p-ink"></span></a>
+      </li>
+      <li lbUserAccess>
+        <a pRipple="" routerLink="/menu-private"
+           class="p-ripple p-element flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
+          <i class="bi bi-gear mr-2"></i><span>{{'Menu-Private'|translate}}</span><span class="p-ink"></span></a>
+      </li>
+    </ul>
+
+
+    <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row">
+      <li class="hidden lg:block">
+        <a pRipple="" (click)="this.toggleTheme()"
+           class="p-ripple p-element mr-2 flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
+          <i class="cursor-pointer text-xl"
+             [ngClass]="this.currentThemeIcon"></i>
+        </a>
+      </li>
+      <li>
+        <lb-shared-language-selector class="mr-4 hidden lg:block"></lb-shared-language-selector>
+      </li>
+      <li *ngIf="!this.isAuthenticated()">
+        <a pRipple="" routerLink="/login"
+           class="p-ripple p-element flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
+          <i class="bi bi-box-arrow-right mr-2"></i><span>{{'menu.sign-in'|translate}}</span><span class="p-ink"></span>
+        </a>
+      </li>
+      <li *ngIf="this.isAuthenticated()" class="relative">
+        <a pRipple="" pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden"
+           leaveActiveClass="fadeout" [hideOnOutsideClick]="true"
+           class="p-ripple p-element flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
+          <span>{{this.userName}}</span><i class="bi bi-chevron-down ml-auto lg:ml-3"></i><span
+          class="p-ink"></span>
+        </a>
+        <ul
+          class="list-none py-3 px-6 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:shadow-2 lg:absolute bg-color hidden origin-top w-full lg:w-15rem cursor-pointer right-0 lg:border-1 border-gray-800">
+          <li>
+            <a pRipple="" routerLink="/profile"
+               class="p-ripple p-element flex align-items-center transition-colors transition-duration-150 menu-link">
+              <i class="bi bi-person mr-2"></i><span class="font-medium">{{'menu.profile'|translate}}</span><span
+              class="p-ink"></span>
+            </a>
+          </li>
+          <li>
+            <a pRipple="" (click)="this.logout()"
+               class="p-ripple p-element flex align-items-center transition-colors transition-duration-150 menu-link">
+              <i class="bi bi-lock mr-2"></i><span class="font-medium">{{'menu.logout'|translate}}</span><span
+              class="p-ink"></span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

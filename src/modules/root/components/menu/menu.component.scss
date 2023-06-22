@@ -1,0 +1,12 @@
+.menu{
+  height: var(--theme-menu-height);
+
+  .menu-link{
+    padding: 0.6em;
+    border-radius: var(--theme-border-radius);
+  }
+
+  img.title-image{
+    height: 32px;
+  }
+}

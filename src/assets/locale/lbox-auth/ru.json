@@ -1,0 +1,43 @@
+{
+  "lb-auth": {
+    "login": {
+      "welcome": "Авторизация",
+      "subscription": "Подписка",
+      "login": "Логин",
+      "password": "Пароль",
+      "remember-me": "Запомнить меня",
+      "forgot-password": "Забыли пароль?",
+      "sign-in": "Войти",
+      "sign-up": "Зарегистрироваться"
+    },
+    "registration": {
+      "link": "Регистрация нового пользователя",
+      "welcome": "Регистрация",
+      "registration-message": "Вам будет отправлен email с паролем для входа"
+    },
+    "password-recovery": {
+      "welcome": "Восстановление пароля",
+      "recovery-confirm": "Изменить пароль",
+      "recovery-message": "Вам будет отправлен email для подтверждения"
+    },
+    "profile": {
+      "login": "Логин",
+      "name": "Имя",
+      "email": "Email",
+      "phone": "Телефон",
+      "change-profile": "Редактировать профиль",
+      "change-password": "Сменить пароль",
+      "password-current": "Текущий пароль",
+      "password-new": "Новый пароль",
+      "password-confirmation": "Подтверждение"
+    },
+    "toasts": {
+      "login-successful": "Вход выполнен",
+      "login-error": "Ошибка авторизации",
+      "profile-password-change-successful": "Пароль успешно изменен",
+      "profile-password-change-error": "Не удалось изменить пароль",
+      "registration-successful": "Регистрация прошла успешно",
+      "registration-error": "Ошибка регистрации"
+    }
+  }
+}

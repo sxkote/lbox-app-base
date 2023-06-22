@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "sign-in": "Sign In",
+    "logout": "Logout",
+    "home": "Home",
+    "profile": "Profile"
+  },
+  "toast": {
+    "success": "Success",
+    "error": "Error"
+  }
+}
